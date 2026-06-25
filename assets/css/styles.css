@@ -1831,20 +1831,40 @@ h2.display-title {
 .black-portrait {
   width: min(100%, 520px);
   padding-top: 10px;
+  overflow: visible;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
 }
 
 .black-portrait img {
-  transform: translateY(-6px) scale(1.03);
-  object-position: center 52%;
+  transform: translateY(4px) scale(0.99);
+  object-position: center 34%;
+  filter: saturate(1.02) contrast(1.02);
+  -webkit-mask-image: radial-gradient(ellipse 68% 72% at 50% 46%, #000 48%, rgba(0, 0, 0, 0.86) 62%, rgba(0, 0, 0, 0.38) 80%, transparent 100%);
+  mask-image: radial-gradient(ellipse 68% 72% at 50% 46%, #000 48%, rgba(0, 0, 0, 0.86) 62%, rgba(0, 0, 0, 0.38) 80%, transparent 100%);
 }
 
 .black-photo-arc {
-  inset: -13% -16% 1% -18%;
-  border-color: rgba(200, 148, 50, 0.64);
+  inset: -16% -18% -2% -20%;
+  border-color: rgba(200, 148, 50, 0.28);
   box-shadow:
-    0 0 120px rgba(200, 148, 50, 0.24),
+    0 0 120px rgba(200, 148, 50, 0.2),
     inset 0 0 86px rgba(77, 74, 36, 0.12);
+  opacity: 0.72;
   animation: goldBreath 8s ease-in-out infinite;
+}
+
+.black-portrait::before {
+  content: "";
+  position: absolute;
+  inset: 0% -8% -4% -8%;
+  z-index: 1;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse 58% 68% at 50% 48%, transparent 54%, rgba(0, 0, 0, 0.3) 74%, #000 100%),
+    linear-gradient(180deg, #000 0%, transparent 14%, transparent 78%, #000 100%);
+  mix-blend-mode: multiply;
 }
 
 .black-stats {
@@ -2065,13 +2085,13 @@ h2.display-title {
 
 @keyframes blackPortraitFloat {
   0% {
-    transform: translate3d(-6px, -8px, 0) scale(1.035);
+    transform: translate3d(-5px, 2px, 0) scale(1);
   }
   50% {
-    transform: translate3d(6px, -18px, 0) scale(1.07);
+    transform: translate3d(6px, -8px, 0) scale(1.025);
   }
   100% {
-    transform: translate3d(-2px, -4px, 0) scale(1.045);
+    transform: translate3d(-2px, 4px, 0) scale(1.01);
   }
 }
 
