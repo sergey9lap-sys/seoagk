@@ -516,6 +516,50 @@
           display: none;
         }
       }
+
+      @media (max-width: 620px) {
+        .variant-hero {
+          overflow-x: clip;
+        }
+
+        .variant-hero-shell {
+          width: 100%;
+          max-width: calc(100vw - 36px);
+          padding-top: 104px;
+          gap: 28px;
+        }
+
+        .variant-hero-copy {
+          width: 100%;
+          max-width: 100%;
+          min-width: 0;
+        }
+
+        .variant-hero .eyebrow {
+          max-width: 100%;
+          font-size: 0.78rem;
+          line-height: 1.22;
+        }
+
+        .variant-hero .display-title {
+          max-width: 100%;
+          font-size: clamp(3rem, 13.8vw, 4.1rem);
+          line-height: 0.92;
+          overflow-wrap: break-word;
+          hyphens: auto;
+        }
+
+        .variant-hero .actions,
+        .variant-hero .button {
+          max-width: 100%;
+        }
+
+        .variant-hero .button {
+          min-width: 0;
+          white-space: normal;
+          text-align: center;
+        }
+      }
     </style>
   </head>
   <body>
