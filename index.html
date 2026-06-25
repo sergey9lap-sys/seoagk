@@ -1,0 +1,850 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Александра Горева-Куртышева — варианты дизайна</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/styles.css?v=20260625-1227" />
+    <style>
+      #black-programs .section-head {
+        max-width: 980px;
+      }
+
+      #black-programs .display-title {
+        max-width: 880px;
+      }
+
+      .tz-program-map {
+        display: grid;
+        grid-template-columns: minmax(220px, 0.72fr) minmax(320px, 1fr) minmax(220px, 0.72fr);
+        grid-template-areas:
+          "events core club"
+          "vision methodist business";
+        gap: 26px 44px;
+        align-items: center;
+        width: min(1180px, 100%);
+        margin: clamp(14px, 2vw, 28px) auto clamp(24px, 3vw, 44px);
+      }
+
+      .tz-program-core {
+        grid-area: core;
+        align-self: center;
+        justify-self: center;
+        max-width: 500px;
+        padding: clamp(16px, 2vw, 26px);
+        text-align: left;
+      }
+
+      .tz-program-core span {
+        display: block;
+        margin-bottom: 8px;
+        color: rgba(8, 6, 4, 0.66);
+        font-weight: 800;
+        text-transform: uppercase;
+      }
+
+      .tz-program-core h3 {
+        max-width: 520px;
+        margin: 0 0 18px;
+        color: #120c06;
+        font-family: Inter, Arial, sans-serif;
+        font-size: clamp(1.55rem, 2.2vw, 2.6rem);
+        line-height: 1.08;
+      }
+
+      .tz-program-core p {
+        max-width: 470px;
+        margin: 0;
+        color: rgba(8, 6, 4, 0.78);
+        font-size: clamp(0.95rem, 1vw, 1.08rem);
+        line-height: 1.42;
+      }
+
+      .tz-program-card {
+        display: flex;
+        min-height: 150px;
+        padding: 22px 24px;
+        flex-direction: column;
+        align-items: flex-start;
+        border: 1px solid rgba(211, 173, 105, 0.34);
+        border-radius: 0;
+        background:
+          linear-gradient(145deg, rgba(211, 173, 105, 0.08), transparent 46%),
+          #0b0805;
+        color: var(--ivory);
+        box-shadow: 0 18px 44px rgba(8, 6, 4, 0.22);
+      }
+
+      .tz-program-card h3 {
+        margin: 0 0 12px;
+        font-family: Inter, Arial, sans-serif;
+        font-size: clamp(1.2rem, 1.45vw, 1.7rem);
+        font-weight: 500;
+        line-height: 1.1;
+      }
+
+      .tz-program-card p {
+        margin: 0 0 18px;
+        color: rgba(243, 233, 220, 0.72);
+        font-size: 0.92rem;
+        line-height: 1.35;
+      }
+
+      .tz-program-card a {
+        margin-top: auto;
+        color: var(--ivory);
+        font-weight: 800;
+      }
+
+      .tz-card-events {
+        grid-area: events;
+      }
+
+      .tz-card-club {
+        grid-area: club;
+      }
+
+      .tz-card-vision {
+        grid-area: vision;
+      }
+
+      .tz-card-methodist {
+        grid-area: methodist;
+      }
+
+      .tz-card-business {
+        grid-area: business;
+      }
+
+      .strategy-link-card {
+        display: grid;
+        gap: 16px;
+        width: min(960px, 100%);
+        margin: clamp(34px, 5vw, 62px) auto 0;
+        padding: clamp(28px, 4vw, 52px);
+        border: 1px solid rgba(8, 6, 4, 0.72);
+        color: inherit;
+        transition: transform 220ms var(--ease), box-shadow 220ms var(--ease);
+      }
+
+      .strategy-link-card:hover,
+      .strategy-link-card:focus-visible {
+        transform: translateY(-4px);
+      }
+
+      .strategy-link-card span {
+        max-width: 720px;
+        font-size: clamp(1.15rem, 1.6vw, 1.65rem);
+        line-height: 1.38;
+      }
+
+      .strategy-link-card strong {
+        max-width: 620px;
+        font-size: clamp(1.3rem, 2vw, 2.15rem);
+        font-weight: 500;
+        line-height: 1.24;
+      }
+
+      .strategy-link-card em {
+        max-width: 680px;
+        font-style: normal;
+        line-height: 1.45;
+        opacity: 0.78;
+      }
+
+      .strategy-link-card b {
+        display: inline-flex;
+        width: max-content;
+        min-height: 48px;
+        align-items: center;
+        justify-content: center;
+        margin-top: 4px;
+        padding: 0 26px;
+        font-weight: 800;
+      }
+
+      #black-programs .strategy-link-card {
+        border-color: rgba(8, 6, 4, 0.72);
+        background: #0b0805;
+        color: var(--ivory);
+        box-shadow: 0 18px 48px rgba(8, 6, 4, 0.24);
+      }
+
+      #black-programs .strategy-link-card b {
+        border-radius: 999px;
+        background: var(--gold);
+        color: #080604;
+      }
+
+      @media (max-width: 900px) {
+        .tz-program-map {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          grid-template-areas:
+            "core core"
+            "events club"
+            "vision methodist"
+            "business business";
+          gap: 18px;
+        }
+
+        .tz-program-core {
+          justify-self: start;
+        }
+      }
+
+      @media (max-width: 620px) {
+        .tz-program-map {
+          grid-template-columns: 1fr;
+          grid-template-areas:
+            "core"
+            "events"
+            "club"
+            "vision"
+            "methodist"
+            "business";
+        }
+      }
+
+      .variant-hero {
+        position: relative;
+      }
+
+      .variant-hero .site-header {
+        position: absolute;
+        top: 14px;
+        left: clamp(18px, 3vw, 44px);
+        right: clamp(18px, 3vw, 44px);
+        z-index: 30;
+        width: auto;
+        margin: 0;
+        min-height: 76px;
+        align-items: center;
+        padding: 12px 18px;
+        backdrop-filter: blur(18px);
+      }
+
+      .site-header .main-nav {
+        margin-right: clamp(34px, 6vw, 112px);
+      }
+
+      .variant-hero-shell {
+        display: grid;
+        grid-template-columns: minmax(0, 0.9fr) 1px minmax(300px, 0.7fr);
+        align-items: center;
+        gap: clamp(24px, 4vw, 64px);
+        width: min(1360px, 100%);
+        margin: 0 auto clamp(24px, 4vw, 44px);
+        padding-top: clamp(112px, 9vw, 146px);
+      }
+
+      .variant-hero-copy {
+        max-width: 760px;
+      }
+
+      .variant-hero-line {
+        width: 1px;
+        height: min(52vh, 420px);
+      }
+
+      .variant-portrait {
+        position: relative;
+        justify-self: center;
+        width: min(100%, 455px);
+        aspect-ratio: 0.78;
+        overflow: visible;
+      }
+
+      .variant-portrait img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center 46%;
+        transform: translateY(8px) scale(0.98);
+        -webkit-mask-image: radial-gradient(ellipse 64% 62% at 50% 50%, #000 54%, rgba(0, 0, 0, 0.82) 68%, transparent 100%);
+        mask-image: radial-gradient(ellipse 64% 62% at 50% 50%, #000 54%, rgba(0, 0, 0, 0.82) 68%, transparent 100%);
+      }
+
+      .variant-photo-arc {
+        position: absolute;
+        inset: -16% -18% 3% -24%;
+        z-index: -1;
+        border-radius: 52% 52% 6% 6%;
+      }
+
+      .variant-author-layout {
+        width: min(1360px, 100%);
+      }
+
+      .set-stone .variant-hero .site-header {
+        border: 1px solid rgba(66, 62, 59, 0.22);
+        background: rgba(246, 244, 242, 0.66);
+      }
+
+      .set-stone .variant-hero .button,
+      #stone-author .button {
+        min-height: 62px;
+        min-width: 196px;
+        padding: 0 36px;
+        font-size: 1rem;
+      }
+
+      .set-stone .button-dark-solid,
+      .set-stone .variant-hero .button-dark-solid {
+        background: #6c655e;
+        color: var(--off-white);
+      }
+
+      .set-stone .button-ghost {
+        border: 1px solid rgba(66, 62, 59, 0.72);
+        background: transparent;
+        color: #5d5650;
+      }
+
+      .set-stone #stone-author .button-light {
+        border: 1px solid rgba(66, 62, 59, 0.72);
+        background: #6c655e;
+        color: var(--off-white);
+      }
+
+      .set-stone .variant-hero-line {
+        background: linear-gradient(180deg, transparent, rgba(66, 62, 59, 0.38), transparent);
+      }
+
+      .set-stone .variant-photo-arc {
+        border: 1px solid rgba(66, 62, 59, 0.26);
+        background: radial-gradient(circle at 50% 34%, rgba(180, 152, 107, 0.22), transparent 48%);
+      }
+
+      .set-stone .variant-portrait img {
+        object-position: center 38%;
+        transform: translateY(-18px) scale(0.98);
+      }
+
+      #stone-programs .tz-program-card {
+        border-color: rgba(66, 62, 59, 0.26);
+        background: #ead6bf;
+        color: var(--dark-charcoal);
+        box-shadow: 0 16px 36px rgba(66, 62, 59, 0.08);
+      }
+
+      #stone-programs .tz-program-card p {
+        color: rgba(66, 62, 59, 0.72);
+      }
+
+      #stone-programs .tz-program-card a {
+        color: var(--dark-charcoal);
+      }
+
+      #stone-programs .strategy-panel {
+        background: rgba(66, 62, 59, 0.96);
+        color: var(--off-white);
+      }
+
+      #stone-programs .strategy-link-card {
+        border-color: rgba(66, 62, 59, 0.34);
+        background: #ead6bf;
+        color: var(--dark-charcoal);
+        box-shadow: 0 18px 42px rgba(66, 62, 59, 0.1);
+      }
+
+      #stone-programs .strategy-link-card b {
+        border-radius: 999px;
+        background: #6c655e;
+        color: var(--off-white);
+      }
+
+      #stone-programs .strategy-proof article {
+        border-color: rgba(234, 214, 191, 0.82);
+        border-left-color: #ead6bf;
+        background: #ead6bf;
+        color: var(--dark-charcoal);
+      }
+
+      #stone-programs .strategy-proof strong {
+        color: var(--dark-charcoal);
+      }
+
+      #stone-programs .strategy-proof span {
+        color: rgba(66, 62, 59, 0.78);
+      }
+
+      #stone-author {
+        color: var(--dark-charcoal);
+      }
+
+      #stone-author .lead,
+      #stone-author .author-timeline p {
+        color: rgba(66, 62, 59, 0.72);
+      }
+
+      #stone-author .author-timeline span {
+        color: var(--dark-charcoal);
+      }
+
+      #stone-author .author-timeline {
+        border-top-color: rgba(246, 244, 242, 0.24);
+      }
+
+      #stone-author .author-timeline div {
+        border-bottom-color: rgba(246, 244, 242, 0.2);
+      }
+
+      .set-wine .variant-hero .site-header {
+        border: 1px solid rgba(82, 31, 45, 0.3);
+        background: rgba(234, 214, 191, 0.88);
+        color: var(--burgundy-clean);
+      }
+
+      .set-wine .variant-hero .main-nav {
+        opacity: 1;
+      }
+
+      .set-wine .variant-hero .button,
+      #wine-author .button {
+        min-height: 62px;
+        min-width: 196px;
+        padding: 0 36px;
+        font-size: 1rem;
+      }
+
+      .set-wine .button-wine,
+      .set-wine .variant-hero .button-wine {
+        background: var(--burgundy-clean);
+        color: var(--beige-clean);
+      }
+
+      .set-wine .button-ghost {
+        border: 1px solid rgba(74, 32, 43, 0.72);
+        background: transparent;
+        color: var(--burgundy-clean);
+      }
+
+      .set-wine .variant-hero-line {
+        background: linear-gradient(180deg, transparent, rgba(234, 214, 191, 0.48), transparent);
+      }
+
+      .set-wine .variant-photo-arc {
+        border: 1px solid rgba(74, 32, 43, 0.34);
+        background:
+          radial-gradient(circle at 50% 34%, rgba(74, 32, 43, 0.09), transparent 46%),
+          linear-gradient(135deg, rgba(74, 32, 43, 0.08), transparent 62%);
+        box-shadow: 0 0 70px rgba(74, 32, 43, 0.1);
+      }
+
+      .set-wine .variant-portrait img {
+        object-position: center 40%;
+        transform: translateY(-10px) scale(0.98);
+      }
+
+      #wine-programs .tz-program-card {
+        border-color: rgba(234, 214, 191, 0.28);
+        background:
+          linear-gradient(145deg, rgba(234, 214, 191, 0.06), transparent 46%),
+          rgba(19, 10, 13, 0.82);
+        color: var(--beige-clean);
+      }
+
+      #wine-programs .tz-program-card p {
+        color: rgba(234, 214, 191, 0.74);
+      }
+
+      #wine-programs .tz-program-card a {
+        color: var(--beige-clean);
+      }
+
+      #wine-programs .tz-program-core span,
+      #wine-programs .tz-program-core h3,
+      #wine-programs .tz-program-core p {
+        color: var(--beige-clean);
+      }
+
+      #wine-programs .strategy-panel {
+        border-color: rgba(234, 214, 191, 0.26);
+        background: rgba(19, 10, 13, 0.92);
+        color: var(--beige-clean);
+      }
+
+      #wine-programs .strategy-link-card {
+        border-color: rgba(234, 214, 191, 0.28);
+        background: rgba(19, 10, 13, 0.86);
+        color: var(--beige-clean);
+        box-shadow: 0 18px 42px rgba(19, 10, 13, 0.2);
+      }
+
+      #wine-programs .strategy-link-card b {
+        border-radius: 999px;
+        background: var(--beige-clean);
+        color: var(--burgundy-clean);
+      }
+
+      #wine-programs .strategy-proof article {
+        border-color: rgba(234, 214, 191, 0.84);
+        border-left-color: var(--beige-clean);
+        background: var(--beige-clean);
+        color: var(--burgundy-clean);
+      }
+
+      #wine-programs .strategy-proof strong,
+      #wine-programs .strategy-proof span {
+        color: var(--burgundy-clean);
+      }
+
+      #wine-author .author-timeline {
+        border-top-color: rgba(63, 36, 42, 0.28);
+      }
+
+      #wine-author .author-timeline div {
+        border-bottom-color: rgba(63, 36, 42, 0.22);
+      }
+
+      #wine-author .author-timeline p {
+        color: rgba(19, 10, 13, 0.72);
+      }
+
+      @media (max-width: 900px) {
+        .variant-hero-shell {
+          grid-template-columns: 1fr;
+        }
+
+        .variant-hero-line {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="site-shell">
+      <section class="design-set set-black" aria-label="Черно-золотой вариант">
+        <div class="set-label reveal">Вариант 1 · черно-золотой</div>
+
+        <section class="block hero-block tone-black black-hero" id="black-home">
+          <div class="texture"></div>
+          <header class="site-header reveal">
+            <a class="brand" href="/" aria-label="Александра Горева-Куртышева">
+              <img src="assets/img/logo.png" alt="Александра Горева-Куртышева" />
+            </a>
+            <nav class="main-nav" aria-label="Главное меню">
+              <a href="/programs/">Программы</a>
+              <a href="/events/">Ближайшие мероприятия</a>
+              <a href="/cases/">Кейсы</a>
+              <a href="/articles/">Статьи</a>
+              <a href="/about/">Об авторе</a>
+              <a href="/social/">Соц. сети</a>
+            </nav>
+          </header>
+          <div class="black-hero-shell">
+            <div class="black-hero-copy">
+              <p class="eyebrow reveal">Для сильных предпринимателей и востребованных экспертов</p>
+              <h1 class="display-title reveal">Архитектура обучения. Методология и развитие экспертов.</h1>
+              <div class="actions reveal">
+                <a class="button button-gold" href="/programs/">Программы обучения</a>
+              </div>
+            </div>
+
+            <div class="black-hero-line" aria-hidden="true"></div>
+
+            <aside class="portrait-card black-portrait reveal">
+              <div class="black-photo-arc" aria-hidden="true"></div>
+              <img src="assets/img/hero-portrait.jpg" alt="Александра Горева-Куртышева" />
+              <div class="portrait-name">
+                <span>Александра</span>
+                <strong>Горева-Куртышева</strong>
+              </div>
+            </aside>
+          </div>
+          <div class="stats-row black-stats reveal">
+            <div><strong>17 лет</strong><span>в бизнес-образовании</span></div>
+            <div><strong>20 000+</strong><span>часов консультаций</span></div>
+            <div><strong>40 000+</strong><span>учеников из 50 стран</span></div>
+            <div><strong>98%</strong><span>конверсия студентов в кейс</span></div>
+          </div>
+        </section>
+
+        <section class="block programs-block tone-gold black-ecosystem" id="black-programs">
+          <div class="section-head">
+            <h2 class="display-title reveal">Ближайшие мероприятия</h2>
+          </div>
+          <div class="tz-program-map">
+            <article class="tz-program-card tz-card-events reveal">
+              <h3>Ближайшие мероприятия</h3>
+              <p>Живые встречи на актуальные темы развития онлайн-образования.</p>
+              <a href="/events/">Узнать подробнее</a>
+            </article>
+            <article class="tz-program-core reveal">
+              <span>Методология</span>
+              <h3>17 поток — старт сентябрь 2026</h3>
+              <p>Создание востребованного онлайн-курса через знания, мастерство и опыт эксперта.</p>
+            </article>
+            <article class="tz-program-card tz-card-club reveal">
+              <h3>Метод клуб</h3>
+              <p>Экосистема для экспертов и предпринимателей, библиотека и разборы ярких кейсов.</p>
+              <a href="/method-club/">Узнать подробнее</a>
+            </article>
+            <article class="tz-program-card tz-card-vision reveal">
+              <h3>Мастер-группа «Визионеры»</h3>
+              <p>Персональная работа с Сашей для экспертов и предпринимателей.</p>
+              <a href="/visioners/">Узнать подробнее</a>
+            </article>
+            <article class="tz-program-card tz-card-methodist reveal">
+              <h3>Онлайн-курс «Методист»</h3>
+              <p>Профессия и практика методиста в современной онлайн-школе.</p>
+              <a href="/methodist/">Узнать подробнее</a>
+            </article>
+            <article class="tz-program-card tz-card-business reveal">
+              <h3>Бизнес360</h3>
+              <p>Программа подготовки экспертов к системному росту.</p>
+              <a href="/business360/">Узнать подробнее</a>
+            </article>
+          </div>
+          <a class="strategy-link-card reveal" href="/strategy-session/">
+            <span>Как превратить ваш мастер-класс, выступление или курс в эффективный образовательный продукт</span>
+            <strong>Стратегическая сессия Александры Горевой-Куртышевой</strong>
+            <em>Разработка курса, развитие в методологии или наставничество</em>
+            <b>Записаться</b>
+          </a>
+        </section>
+
+        <section class="block author-block tone-copper black-author-screen" id="black-author">
+          <div class="author-layout black-author-layout">
+            <div class="author-photo black-author-photo reveal">
+              <img src="assets/img/author-portrait.jpg" alt="Александра Горева-Куртышева" />
+            </div>
+            <div class="author-content">
+              <p class="eyebrow reveal">Автор образовательных программ</p>
+              <h2 class="display-title reveal">Александра<br />Горева-Куртышева</h2>
+              <p class="lead reveal">
+                Эдтех-предприниматель, собственник тренинговой компании,
+                методического агентства и крупной онлайн-школы по методологии и
+                наставничеству.
+              </p>
+              <div class="author-timeline reveal">
+                <div><span>01</span><p>Выпускница Сколково, резидент Клуба первых</p></div>
+                <div><span>02</span><p>Консультант Сбер, Роснефть, Норникель, Nestle, X5, ВкусВилл</p></div>
+                <div><span>03</span><p>Автор первой профессиональной программы подготовки наставников</p></div>
+                <div><span>04</span><p>Эдтех-предприниматель</p></div>
+              </div>
+              <a class="button button-dark-solid reveal" href="/strategy-session/">Записаться</a>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <section class="design-set set-stone" aria-label="Серо-бежевый вариант">
+        <div class="set-label reveal">Вариант 2 · серо-бежевый</div>
+
+        <section class="block hero-block tone-offwhite variant-hero" id="stone-home">
+          <header class="site-header reveal">
+            <a class="brand" href="/" aria-label="Александра Горева-Куртышева">
+              <img src="assets/img/logo.png" alt="Александра Горева-Куртышева" />
+            </a>
+            <nav class="main-nav" aria-label="Главное меню">
+              <a href="/programs/">Программы</a><a href="/events/">Мероприятия</a><a href="/cases/">Кейсы</a><a href="/articles/">Статьи</a><a href="/about/">Об авторе</a><a href="/social/">Соц. сети</a>
+            </nav>
+          </header>
+          <div class="variant-hero-shell">
+            <div class="variant-hero-copy">
+              <p class="eyebrow reveal">Для сильных предпринимателей и востребованных экспертов</p>
+              <h1 class="display-title reveal">Архитектура обучения. Методология и развитие экспертов.</h1>
+              <div class="actions reveal">
+                <a class="button button-dark-solid" href="/programs/">Программы обучения</a>
+              </div>
+            </div>
+
+            <div class="variant-hero-line" aria-hidden="true"></div>
+
+            <aside class="variant-portrait reveal">
+              <div class="variant-photo-arc" aria-hidden="true"></div>
+              <img src="assets/img/hero-portrait.jpg" alt="Александра Горева-Куртышева" />
+            </aside>
+          </div>
+          <div class="stats-row reveal">
+            <div><strong>17 лет</strong><span>в бизнес-образовании</span></div>
+            <div><strong>20 000+</strong><span>часов консультаций</span></div>
+            <div><strong>40 000+</strong><span>учеников из 50 стран</span></div>
+            <div><strong>98%</strong><span>конверсия студентов в кейс</span></div>
+          </div>
+        </section>
+
+        <section class="block programs-block tone-warmgrey" id="stone-programs">
+          <div class="section-head">
+            <h2 class="display-title reveal">Ближайшие мероприятия</h2>
+          </div>
+          <div class="tz-program-map">
+            <article class="tz-program-card tz-card-events reveal">
+              <h3>Ближайшие мероприятия</h3>
+              <p>Живые встречи на актуальные темы развития онлайн-образования.</p>
+              <a href="/events/">Узнать подробнее</a>
+            </article>
+            <article class="tz-program-core reveal">
+              <span>Методология</span>
+              <h3>17 поток — старт сентябрь 2026</h3>
+              <p>Создание востребованного онлайн-курса через знания, мастерство и опыт эксперта.</p>
+            </article>
+            <article class="tz-program-card tz-card-club reveal">
+              <h3>Метод клуб</h3>
+              <p>Экосистема для экспертов и предпринимателей, библиотека и разборы ярких кейсов.</p>
+              <a href="/method-club/">Узнать подробнее</a>
+            </article>
+            <article class="tz-program-card tz-card-vision reveal">
+              <h3>Мастер-группа «Визионеры»</h3>
+              <p>Персональная работа с Сашей для экспертов и предпринимателей.</p>
+              <a href="/visioners/">Узнать подробнее</a>
+            </article>
+            <article class="tz-program-card tz-card-methodist reveal">
+              <h3>Онлайн-курс «Методист»</h3>
+              <p>Профессия и практика методиста в современной онлайн-школе.</p>
+              <a href="/methodist/">Узнать подробнее</a>
+            </article>
+            <article class="tz-program-card tz-card-business reveal">
+              <h3>Бизнес360</h3>
+              <p>Программа подготовки экспертов к системному росту.</p>
+              <a href="/business360/">Узнать подробнее</a>
+            </article>
+          </div>
+          <a class="strategy-link-card reveal" href="/strategy-session/">
+            <span>Как превратить ваш мастер-класс, выступление или курс в эффективный образовательный продукт</span>
+            <strong>Стратегическая сессия Александры Горевой-Куртышевой</strong>
+            <em>Разработка курса, развитие в методологии или наставничество</em>
+            <b>Записаться</b>
+          </a>
+        </section>
+
+        <section class="block author-block tone-charcoal" id="stone-author">
+          <div class="author-layout variant-author-layout">
+            <div class="author-photo reveal">
+              <img src="assets/img/author-portrait.jpg" alt="Александра Горева-Куртышева" />
+            </div>
+            <div class="author-content">
+              <p class="eyebrow reveal">Автор образовательных программ</p>
+              <h2 class="display-title reveal">Александра<br />Горева-Куртышева</h2>
+              <p class="lead reveal">
+                Эдтех-предприниматель, собственник тренинговой компании,
+                методического агентства и крупной онлайн-школы по методологии и
+                наставничеству.
+              </p>
+              <div class="author-timeline reveal">
+                <div><span>01</span><p>Выпускница Сколково, резидент Клуба первых</p></div>
+                <div><span>02</span><p>Консультант Сбер, Роснефть, Норникель, Nestle, X5, ВкусВилл</p></div>
+                <div><span>03</span><p>Автор первой профессиональной программы подготовки наставников</p></div>
+                <div><span>04</span><p>Эдтех-предприниматель</p></div>
+              </div>
+              <a class="button button-light reveal" href="/strategy-session/">Записаться</a>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <section class="design-set set-wine" aria-label="Бежево-бордовый вариант">
+        <div class="set-label reveal">Вариант 3 · бежево-бордовый</div>
+
+        <section class="block hero-block tone-ebony variant-hero" id="wine-home">
+          <header class="site-header reveal">
+            <a class="brand" href="/" aria-label="Александра Горева-Куртышева">
+              <img src="assets/img/logo.png" alt="Александра Горева-Куртышева" />
+            </a>
+            <nav class="main-nav" aria-label="Главное меню">
+              <a href="/programs/">Программы</a><a href="/events/">Мероприятия</a><a href="/cases/">Кейсы</a><a href="/articles/">Статьи</a><a href="/about/">Об авторе</a><a href="/social/">Соц. сети</a>
+            </nav>
+          </header>
+          <div class="variant-hero-shell">
+            <div class="variant-hero-copy">
+              <p class="eyebrow reveal">Для сильных предпринимателей и востребованных экспертов</p>
+              <h1 class="display-title reveal">Архитектура обучения. Методология и развитие экспертов.</h1>
+              <div class="actions reveal">
+                <a class="button button-wine" href="/programs/">Программы обучения</a>
+              </div>
+            </div>
+
+            <div class="variant-hero-line" aria-hidden="true"></div>
+
+            <aside class="variant-portrait reveal">
+              <div class="variant-photo-arc" aria-hidden="true"></div>
+              <img src="assets/img/hero-portrait.jpg" alt="Александра Горева-Куртышева" />
+            </aside>
+          </div>
+          <div class="stats-row reveal">
+            <div><strong>17 лет</strong><span>в бизнес-образовании</span></div>
+            <div><strong>20 000+</strong><span>часов консультаций</span></div>
+            <div><strong>40 000+</strong><span>учеников из 50 стран</span></div>
+            <div><strong>98%</strong><span>конверсия студентов в кейс</span></div>
+          </div>
+        </section>
+
+        <section class="block programs-block tone-tamarind" id="wine-programs">
+          <div class="section-head">
+            <h2 class="display-title reveal">Ближайшие мероприятия</h2>
+          </div>
+          <div class="tz-program-map">
+            <article class="tz-program-card tz-card-events reveal">
+              <h3>Ближайшие мероприятия</h3>
+              <p>Живые встречи на актуальные темы развития онлайн-образования.</p>
+              <a href="/events/">Узнать подробнее</a>
+            </article>
+            <article class="tz-program-core reveal">
+              <span>Методология</span>
+              <h3>17 поток — старт сентябрь 2026</h3>
+              <p>Создание востребованного онлайн-курса через знания, мастерство и опыт эксперта.</p>
+            </article>
+            <article class="tz-program-card tz-card-club reveal">
+              <h3>Метод клуб</h3>
+              <p>Экосистема для экспертов и предпринимателей, библиотека и разборы ярких кейсов.</p>
+              <a href="/method-club/">Узнать подробнее</a>
+            </article>
+            <article class="tz-program-card tz-card-vision reveal">
+              <h3>Мастер-группа «Визионеры»</h3>
+              <p>Персональная работа с Сашей для экспертов и предпринимателей.</p>
+              <a href="/visioners/">Узнать подробнее</a>
+            </article>
+            <article class="tz-program-card tz-card-methodist reveal">
+              <h3>Онлайн-курс «Методист»</h3>
+              <p>Профессия и практика методиста в современной онлайн-школе.</p>
+              <a href="/methodist/">Узнать подробнее</a>
+            </article>
+            <article class="tz-program-card tz-card-business reveal">
+              <h3>Бизнес360</h3>
+              <p>Программа подготовки экспертов к системному росту.</p>
+              <a href="/business360/">Узнать подробнее</a>
+            </article>
+          </div>
+          <a class="strategy-link-card reveal" href="/strategy-session/">
+            <span>Как превратить ваш мастер-класс, выступление или курс в эффективный образовательный продукт</span>
+            <strong>Стратегическая сессия Александры Горевой-Куртышевой</strong>
+            <em>Разработка курса, развитие в методологии или наставничество</em>
+            <b>Записаться</b>
+          </a>
+        </section>
+
+        <section class="block author-block tone-frappe" id="wine-author">
+          <div class="author-layout variant-author-layout">
+            <div class="author-photo reveal">
+              <img src="assets/img/author-portrait.jpg" alt="Александра Горева-Куртышева" />
+            </div>
+            <div class="author-content">
+              <p class="eyebrow reveal">Автор образовательных программ</p>
+              <h2 class="display-title reveal">Александра<br />Горева-Куртышева</h2>
+              <p class="lead reveal">
+                Эдтех-предприниматель, автор первой профессиональной программы
+                подготовки наставников и стратегических сессий для экспертов.
+              </p>
+              <div class="author-timeline reveal">
+                <div><span>01</span><p>Выпускница Сколково, резидент Клуба первых</p></div>
+                <div><span>02</span><p>Консультант Сбер, Роснефть, Норникель, Nestle, X5, ВкусВилл</p></div>
+                <div><span>03</span><p>Автор первой профессиональной программы подготовки наставников</p></div>
+                <div><span>04</span><p>Эдтех-предприниматель</p></div>
+              </div>
+              <a class="button button-wine reveal" href="/strategy-session/">Записаться</a>
+            </div>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
