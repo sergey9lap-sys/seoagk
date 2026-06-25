@@ -1,7 +1,12 @@
 :root {
   --ivory: #f9f8ee;
+  --gold-1: #d6a65c;
   --gold: #f0d4a5;
-  --copper: #b57f3a;
+  --gold-3: #fff2d8;
+  --gold-4: #f3be72;
+  --gold-gradient: linear-gradient(135deg, #d6a65c 0%, #f0d4a5 36%, #fff2d8 58%, #f3be72 100%);
+  --gold-surface: linear-gradient(180deg, #f3d7a0 0%, #e7be76 55%, #d1a359 100%);
+  --copper: #d1a359;
   --black: #000000;
   --earth-olive: #4d4a24;
   --off-white: #f6f4f2;
@@ -539,7 +544,7 @@ h2.display-title {
 }
 
 .tone-gold {
-  background: linear-gradient(135deg, var(--gold), var(--copper));
+  background: var(--gold-surface);
   color: #080604;
 }
 
@@ -588,7 +593,7 @@ h2.display-title {
 }
 
 .button-gold {
-  background: var(--gold);
+  background: var(--gold-gradient);
   color: #080604;
 }
 
@@ -967,7 +972,7 @@ h2.display-title {
 }
 
 .set-black .tone-gold {
-  background: var(--gold);
+  background: var(--gold-surface);
   color: #090604;
 }
 
@@ -975,8 +980,8 @@ h2.display-title {
 .set-black .program-tile,
 .set-black .stats-row div,
 .set-black .facts span {
-  background: var(--gold);
-  border-color: rgba(201, 154, 69, 0.9);
+  background: var(--gold-surface);
+  border-color: rgba(214, 166, 92, 0.72);
   color: #090604;
 }
 
@@ -1581,7 +1586,7 @@ h2.display-title {
 }
 
 .set-black .button-dark-solid {
-  background: var(--gold);
+  background: var(--gold-gradient);
   color: #090604;
 }
 
@@ -1745,8 +1750,12 @@ h2.display-title {
 
 /* Final black-gold polish pass. */
 .set-black {
+  --gold-1: #d6a65c;
   --gold: #f0d4a5;
-  --gold-bright: #f7e5c5;
+  --gold-bright: #fff2d8;
+  --gold-4: #f3be72;
+  --gold-gradient: linear-gradient(135deg, #d6a65c 0%, #f0d4a5 36%, #fff2d8 58%, #f3be72 100%);
+  --gold-surface: linear-gradient(180deg, #f3d7a0 0%, #e7be76 55%, #d1a359 100%);
   --deep-black: #000000;
   --black-card: #050505;
   --olive-accent: #4d4a24;
@@ -1825,7 +1834,7 @@ h2.display-title {
 .black-hero .button-gold,
 .strategy-panel .button-gold,
 .set-black .button-dark-solid {
-  background: linear-gradient(135deg, var(--gold-bright), var(--gold));
+  background: var(--gold-gradient);
   color: #070504;
 }
 
@@ -2049,7 +2058,7 @@ h2.display-title {
 .black-ecosystem {
   background:
     radial-gradient(circle at 18% 12%, rgba(77, 74, 36, 0.16), transparent 28%),
-    linear-gradient(180deg, #f0d4a5, #d9b879);
+    var(--gold-surface);
 }
 
 .motion-ready .black-portrait.reveal,
