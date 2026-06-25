@@ -1,8 +1,9 @@
 :root {
-  --ivory: #f3e9dc;
-  --gold: #c99a45;
+  --ivory: #f9f8ee;
+  --gold: #c89432;
   --copper: #b57f3a;
   --black: #000000;
+  --earth-olive: #4d4a24;
   --off-white: #f6f4f2;
   --warm-grey: #d3c9bd;
   --muted-tan: #ab9e8e;
@@ -1738,8 +1739,11 @@ h2.display-title {
 
 /* Final black-gold polish pass. */
 .set-black {
-  --gold: #c0924d;
-  --gold-bright: #d3ad69;
+  --gold: #c89432;
+  --gold-bright: #d6a13d;
+  --deep-black: #000000;
+  --black-card: #050505;
+  --olive-accent: #4d4a24;
 }
 
 .black-hero {
@@ -1753,9 +1757,9 @@ h2.display-title {
   z-index: 0;
   pointer-events: none;
   background-image:
-    radial-gradient(circle at 18% 24%, rgba(211, 173, 105, 0.22) 0 1px, transparent 1.6px),
-    radial-gradient(circle at 72% 18%, rgba(243, 233, 220, 0.16) 0 0.7px, transparent 1.4px),
-    radial-gradient(circle at 58% 68%, rgba(211, 173, 105, 0.16) 0 0.9px, transparent 1.7px);
+    radial-gradient(circle at 18% 24%, rgba(200, 148, 50, 0.22) 0 1px, transparent 1.6px),
+    radial-gradient(circle at 72% 18%, rgba(249, 248, 238, 0.16) 0 0.7px, transparent 1.4px),
+    radial-gradient(circle at 58% 68%, rgba(77, 74, 36, 0.2) 0 0.9px, transparent 1.7px);
   background-size: 220px 180px, 260px 240px, 310px 210px;
   opacity: 0.34;
   animation: blackDust 18s linear infinite;
@@ -1772,9 +1776,9 @@ h2.display-title {
   margin: 0;
   align-items: center;
   padding: 12px 18px;
-  border: 1px solid rgba(192, 146, 77, 0.22);
-  border-bottom-color: rgba(211, 173, 105, 0.44);
-  background: rgba(5, 4, 3, 0.62);
+  border: 1px solid rgba(200, 148, 50, 0.22);
+  border-bottom-color: rgba(200, 148, 50, 0.44);
+  background: rgba(0, 0, 0, 0.66);
   backdrop-filter: blur(18px);
 }
 
@@ -1793,7 +1797,7 @@ h2.display-title {
 .black-hero .main-nav a:hover,
 .black-hero .main-nav a:focus-visible {
   color: var(--gold-bright);
-  text-shadow: 0 0 22px rgba(211, 173, 105, 0.24);
+  text-shadow: 0 0 22px rgba(200, 148, 50, 0.24);
 }
 
 .black-hero .display-title {
@@ -1809,7 +1813,7 @@ h2.display-title {
   padding: 0 38px;
   font-size: 1.04rem;
   cursor: pointer;
-  box-shadow: 0 18px 46px rgba(192, 146, 77, 0.16);
+  box-shadow: 0 18px 46px rgba(200, 148, 50, 0.18);
 }
 
 .black-hero .button-gold,
@@ -1825,26 +1829,27 @@ h2.display-title {
 }
 
 .black-portrait {
-  padding-top: 24px;
+  width: min(100%, 520px);
+  padding-top: 10px;
 }
 
 .black-portrait img {
-  transform: translateY(12px) scale(0.97);
-  object-position: center 58%;
+  transform: translateY(-6px) scale(1.03);
+  object-position: center 52%;
 }
 
 .black-photo-arc {
-  inset: -16% -18% 3% -24%;
-  border-color: rgba(211, 173, 105, 0.62);
+  inset: -13% -16% 1% -18%;
+  border-color: rgba(200, 148, 50, 0.64);
   box-shadow:
-    0 0 110px rgba(192, 146, 77, 0.24),
-    inset 0 0 80px rgba(192, 146, 77, 0.08);
+    0 0 120px rgba(200, 148, 50, 0.24),
+    inset 0 0 86px rgba(77, 74, 36, 0.12);
   animation: goldBreath 8s ease-in-out infinite;
 }
 
 .black-stats {
   position: relative;
-  border-top-color: rgba(211, 173, 105, 0.32);
+  border-top-color: rgba(200, 148, 50, 0.34);
 }
 
 .black-stats::before {
@@ -1854,7 +1859,7 @@ h2.display-title {
   right: 0;
   top: -1px;
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(211, 173, 105, 0.8), transparent);
+  background: linear-gradient(90deg, transparent, rgba(200, 148, 50, 0.82), transparent);
 }
 
 .black-stats strong {
@@ -1907,9 +1912,9 @@ h2.display-title {
 }
 
 .ecosystem-products .program-tile {
-  border-color: rgba(211, 173, 105, 0.28);
+  border-color: rgba(200, 148, 50, 0.28);
   background:
-    linear-gradient(145deg, rgba(211, 173, 105, 0.08), transparent 48%),
+    linear-gradient(145deg, rgba(200, 148, 50, 0.09), transparent 48%),
     var(--black-card);
   box-shadow: 0 18px 46px rgba(0, 0, 0, 0.16);
 }
@@ -1958,13 +1963,13 @@ h2.display-title {
 }
 
 .strategy-panel {
-  border-color: rgba(211, 173, 105, 0.26);
+  border-color: rgba(200, 148, 50, 0.28);
 }
 
 .strategy-proof article {
-  border-color: rgba(211, 173, 105, 0.32);
+  border-color: rgba(200, 148, 50, 0.32);
   border-left-color: var(--gold-bright);
-  box-shadow: inset 0 1px 0 rgba(211, 173, 105, 0.14);
+  box-shadow: inset 0 1px 0 rgba(200, 148, 50, 0.14);
 }
 
 .strategy-proof strong {
@@ -1983,7 +1988,7 @@ h2.display-title {
   left: clamp(24px, 5vw, 84px);
   right: clamp(24px, 5vw, 84px);
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(211, 173, 105, 0.36), transparent);
+  background: linear-gradient(90deg, transparent, rgba(200, 148, 50, 0.36), transparent);
 }
 
 .black-author-photo::after {
@@ -1991,20 +1996,59 @@ h2.display-title {
   position: absolute;
   inset: 5% -7% 2% -7%;
   z-index: -1;
-  background: radial-gradient(circle at 50% 42%, rgba(211, 173, 105, 0.16), transparent 64%);
+  background: radial-gradient(circle at 50% 42%, rgba(200, 148, 50, 0.16), transparent 64%);
   filter: blur(26px);
 }
 
 .author-timeline span {
   color: var(--gold-bright);
   font-size: 1.9rem;
-  text-shadow: 0 0 24px rgba(211, 173, 105, 0.18);
+  text-shadow: 0 0 24px rgba(200, 148, 50, 0.18);
 }
 
 .author-timeline div::before {
   top: 16px;
   bottom: 16px;
-  background: linear-gradient(180deg, var(--gold-bright), rgba(211, 173, 105, 0.12));
+  background: linear-gradient(180deg, var(--gold-bright), rgba(200, 148, 50, 0.12));
+}
+
+.black-hero,
+.black-author-screen {
+  background:
+    radial-gradient(circle at 70% 32%, rgba(77, 74, 36, 0.18), transparent 30%),
+    radial-gradient(circle at 75% 42%, rgba(200, 148, 50, 0.14), transparent 24%),
+    linear-gradient(120deg, #000 0%, #020202 62%, #090805 100%);
+}
+
+.black-ecosystem {
+  background:
+    radial-gradient(circle at 18% 12%, rgba(77, 74, 36, 0.16), transparent 28%),
+    linear-gradient(180deg, #c89432, #b78328);
+}
+
+.motion-ready .black-portrait.reveal,
+.motion-ready .black-author-photo.reveal {
+  clip-path: inset(0 0 12% 0 round 0);
+  filter: saturate(0.88) brightness(0.9);
+  transition:
+    opacity 900ms var(--ease),
+    transform 900ms var(--ease),
+    clip-path 1100ms var(--ease),
+    filter 1100ms var(--ease);
+}
+
+.motion-ready .black-portrait.reveal.is-visible,
+.motion-ready .black-author-photo.reveal.is-visible {
+  clip-path: inset(0 0 0 0 round 0);
+  filter: saturate(1) brightness(1);
+}
+
+.motion-ready .black-portrait.reveal.is-visible img {
+  animation: blackPortraitFloat 10s ease-in-out 900ms infinite alternate;
+}
+
+.motion-ready .black-author-photo.reveal.is-visible img {
+  animation: blackAuthorFloat 11s ease-in-out 900ms infinite alternate;
 }
 
 @keyframes goldBreath {
@@ -2016,6 +2060,30 @@ h2.display-title {
   50% {
     opacity: 1;
     transform: scale(1.015);
+  }
+}
+
+@keyframes blackPortraitFloat {
+  0% {
+    transform: translate3d(-6px, -8px, 0) scale(1.035);
+  }
+  50% {
+    transform: translate3d(6px, -18px, 0) scale(1.07);
+  }
+  100% {
+    transform: translate3d(-2px, -4px, 0) scale(1.045);
+  }
+}
+
+@keyframes blackAuthorFloat {
+  0% {
+    transform: translate3d(-4px, 0, 0) scale(1.02);
+  }
+  50% {
+    transform: translate3d(6px, -12px, 0) scale(1.055);
+  }
+  100% {
+    transform: translate3d(0, -4px, 0) scale(1.035);
   }
 }
 

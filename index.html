@@ -10,7 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="assets/css/styles.css?v=20260625-1227" />
+    <link rel="stylesheet" href="assets/css/styles.css?v=20260625-1348" />
     <style>
       #black-programs .section-head {
         max-width: 980px;
@@ -35,10 +35,17 @@
       .tz-program-core {
         grid-area: core;
         align-self: center;
-        justify-self: center;
+        justify-self: stretch;
         max-width: 500px;
         padding: clamp(16px, 2vw, 26px);
         text-align: left;
+      }
+
+      .tz-program-card.tz-program-core {
+        max-width: 520px;
+        min-height: 210px;
+        color: var(--ivory);
+        cursor: pointer;
       }
 
       .tz-program-core span {
@@ -47,6 +54,10 @@
         color: rgba(8, 6, 4, 0.66);
         font-weight: 800;
         text-transform: uppercase;
+      }
+
+      .tz-program-card.tz-program-core span {
+        color: rgba(249, 248, 238, 0.58);
       }
 
       .tz-program-core h3 {
@@ -58,12 +69,21 @@
         line-height: 1.08;
       }
 
+      .tz-program-card.tz-program-core h3 {
+        color: var(--ivory);
+      }
+
       .tz-program-core p {
         max-width: 470px;
         margin: 0;
         color: rgba(8, 6, 4, 0.78);
         font-size: clamp(0.95rem, 1vw, 1.08rem);
         line-height: 1.42;
+      }
+
+      .tz-program-card.tz-program-core p {
+        margin-bottom: 18px;
+        color: rgba(249, 248, 238, 0.72);
       }
 
       .tz-program-card {
@@ -99,6 +119,14 @@
       .tz-program-card a {
         margin-top: auto;
         color: var(--ivory);
+        font-weight: 800;
+      }
+
+      .tz-program-card strong {
+        margin-top: auto;
+        color: inherit;
+        font-family: Inter, Arial, sans-serif;
+        font-size: 0.94rem;
         font-weight: 800;
       }
 
@@ -337,7 +365,20 @@
         color: rgba(66, 62, 59, 0.72);
       }
 
+      #stone-programs .tz-program-card.tz-program-core span,
+      #stone-programs .tz-program-card.tz-program-core h3 {
+        color: var(--dark-charcoal);
+      }
+
+      #stone-programs .tz-program-card.tz-program-core p {
+        color: rgba(66, 62, 59, 0.72);
+      }
+
       #stone-programs .tz-program-card a {
+        color: var(--dark-charcoal);
+      }
+
+      #stone-programs .tz-program-card strong {
         color: var(--dark-charcoal);
       }
 
@@ -454,7 +495,15 @@
         color: rgba(234, 214, 191, 0.74);
       }
 
+      #wine-programs .tz-program-card.tz-program-core p {
+        color: rgba(234, 214, 191, 0.74);
+      }
+
       #wine-programs .tz-program-card a {
+        color: var(--beige-clean);
+      }
+
+      #wine-programs .tz-program-card strong {
         color: var(--beige-clean);
       }
 
@@ -603,10 +652,10 @@
             </aside>
           </div>
           <div class="stats-row black-stats reveal">
-            <div><strong>17 лет</strong><span>в бизнес-образовании</span></div>
-            <div><strong>20 000+</strong><span>часов консультаций</span></div>
-            <div><strong>40 000+</strong><span>учеников из 50 стран</span></div>
-            <div><strong>98%</strong><span>конверсия студентов в кейс</span></div>
+            <div><strong data-count="17" data-suffix=" лет">17 лет</strong><span>в бизнес-образовании</span></div>
+            <div><strong data-count="20000" data-suffix="+">20 000+</strong><span>часов консультаций</span></div>
+            <div><strong data-count="40000" data-suffix="+">40 000+</strong><span>учеников из 50 стран</span></div>
+            <div><strong data-count="98" data-suffix="%">98%</strong><span>конверсия студентов в кейс</span></div>
           </div>
         </section>
 
@@ -620,11 +669,12 @@
               <p>Живые встречи на актуальные темы развития онлайн-образования.</p>
               <a href="/events/">Узнать подробнее</a>
             </article>
-            <article class="tz-program-core reveal">
+            <a class="tz-program-card tz-program-core tz-card-core reveal" href="/programs/">
               <span>Методология</span>
               <h3>17 поток — старт сентябрь 2026</h3>
               <p>Создание востребованного онлайн-курса через знания, мастерство и опыт эксперта.</p>
-            </article>
+              <strong>Узнать подробнее</strong>
+            </a>
             <article class="tz-program-card tz-card-club reveal">
               <h3>Метод клуб</h3>
               <p>Экосистема для экспертов и предпринимателей, библиотека и разборы ярких кейсов.</p>
@@ -708,10 +758,10 @@
             </aside>
           </div>
           <div class="stats-row reveal">
-            <div><strong>17 лет</strong><span>в бизнес-образовании</span></div>
-            <div><strong>20 000+</strong><span>часов консультаций</span></div>
-            <div><strong>40 000+</strong><span>учеников из 50 стран</span></div>
-            <div><strong>98%</strong><span>конверсия студентов в кейс</span></div>
+            <div><strong data-count="17" data-suffix=" лет">17 лет</strong><span>в бизнес-образовании</span></div>
+            <div><strong data-count="20000" data-suffix="+">20 000+</strong><span>часов консультаций</span></div>
+            <div><strong data-count="40000" data-suffix="+">40 000+</strong><span>учеников из 50 стран</span></div>
+            <div><strong data-count="98" data-suffix="%">98%</strong><span>конверсия студентов в кейс</span></div>
           </div>
         </section>
 
@@ -725,11 +775,12 @@
               <p>Живые встречи на актуальные темы развития онлайн-образования.</p>
               <a href="/events/">Узнать подробнее</a>
             </article>
-            <article class="tz-program-core reveal">
+            <a class="tz-program-card tz-program-core tz-card-core reveal" href="/programs/">
               <span>Методология</span>
               <h3>17 поток — старт сентябрь 2026</h3>
               <p>Создание востребованного онлайн-курса через знания, мастерство и опыт эксперта.</p>
-            </article>
+              <strong>Узнать подробнее</strong>
+            </a>
             <article class="tz-program-card tz-card-club reveal">
               <h3>Метод клуб</h3>
               <p>Экосистема для экспертов и предпринимателей, библиотека и разборы ярких кейсов.</p>
@@ -813,10 +864,10 @@
             </aside>
           </div>
           <div class="stats-row reveal">
-            <div><strong>17 лет</strong><span>в бизнес-образовании</span></div>
-            <div><strong>20 000+</strong><span>часов консультаций</span></div>
-            <div><strong>40 000+</strong><span>учеников из 50 стран</span></div>
-            <div><strong>98%</strong><span>конверсия студентов в кейс</span></div>
+            <div><strong data-count="17" data-suffix=" лет">17 лет</strong><span>в бизнес-образовании</span></div>
+            <div><strong data-count="20000" data-suffix="+">20 000+</strong><span>часов консультаций</span></div>
+            <div><strong data-count="40000" data-suffix="+">40 000+</strong><span>учеников из 50 стран</span></div>
+            <div><strong data-count="98" data-suffix="%">98%</strong><span>конверсия студентов в кейс</span></div>
           </div>
         </section>
 
@@ -830,11 +881,12 @@
               <p>Живые встречи на актуальные темы развития онлайн-образования.</p>
               <a href="/events/">Узнать подробнее</a>
             </article>
-            <article class="tz-program-core reveal">
+            <a class="tz-program-card tz-program-core tz-card-core reveal" href="/programs/">
               <span>Методология</span>
               <h3>17 поток — старт сентябрь 2026</h3>
               <p>Создание востребованного онлайн-курса через знания, мастерство и опыт эксперта.</p>
-            </article>
+              <strong>Узнать подробнее</strong>
+            </a>
             <article class="tz-program-card tz-card-club reveal">
               <h3>Метод клуб</h3>
               <p>Экосистема для экспертов и предпринимателей, библиотека и разборы ярких кейсов.</p>
@@ -889,6 +941,6 @@
       </section>
     </main>
 
-    <script src="assets/js/main.js"></script>
+    <script src="assets/js/main.js?v=20260625-1348"></script>
   </body>
 </html>
